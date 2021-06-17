@@ -128,5 +128,8 @@
       }
     }
   },
-  "defaultProject": "binding2"
+  "defaultProject": "binding2",
+  "cli": {
+    "analytics": false
+  }
 }
