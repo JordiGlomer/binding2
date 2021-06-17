@@ -8,19 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InterpolacionComponent implements OnInit {
 
-user = {name: 'John', surname: 'Smith', address: '13 Pine Street'};
+  user = {name: 'John', surname: 'Smith', address: '13 Pine Street'};
 
-persona2:any;
+  persona2: any;
+
+  parrafo = 'lerem ipsum';
 
   constructor() { }
 
   ngOnInit(): void {
 
   }
- duplicarTexto(texto:string){
- return texto+texto;
-}
-concatenarCadenas(cad1:string,cad2:string){
-  return cad1+cad2;
-}
+
+  // tslint:disable-next-line: typedef
+  duplicarTexto(texto: string){
+   return texto + texto;
+  }
+  // tslint:disable-next-line: typedef
+  concatenarCadenas(cad1: string, cad2: string){
+   return cad1 + ' ' + cad2;
+  }
 }

@@ -1,2 +1,23 @@
-<li>><a routerLink='binding' ></a></li>
-<router-outlet></router-outlet>
+<h1>Ejercicios de Binding</h1>
+<mat-divider></mat-divider>
+<mat-tab-group>
+    <mat-tab label="IMÁGENES">
+        <mat-form-field appearance="fill">
+            <!-- <mat-label>Select an image</mat-label> -->
+            <mat-select placeholder="Select an image" name="image" [(value)]="selected">
+                <mat-option value="0">{{ images[0].name }}</mat-option>
+                <mat-option value="1">{{ images[1].name }}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <figure>
+            <img [src]="images[selected]?.url" />
+            <figcaption>{{ images[selected]?.name }}</figcaption>
+        </figure>
+    </mat-tab>
+    <mat-tab label='INPUT'>
+        <mat-label>INPUT:</mat-label>
+        <input matInput (input)='getInputValue($event)'>
+
+        <p>{{inputValue}}</p>
+    </mat-tab>
+</mat-tab-group>
